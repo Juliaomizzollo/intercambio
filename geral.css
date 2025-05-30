@@ -307,6 +307,24 @@ main {
   font-family: 'Montserrat', sans-serif;
   color: #444;
   text-align: justify;
+
+  .sobre-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+  }
+  
+  .foto-perfil {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
 }
 
 /* CONTATO */
@@ -434,6 +452,58 @@ footer {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.95em;
   line-height: 1.5;
+}
+
+/* PRÓLOGO DESTACADO */
+.prologo {
+  display: flex;
+  justify-content: center;
+  padding: 3em 1em;
+  background: #fffdf8;
+}
+
+.prologo-bloco {
+  max-width: 800px;
+  background-color: #fff9f4;
+  border: 2px dashed #f28b82;
+  border-radius: 12px;
+  padding: 2em;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  font-family: 'EB Garamond', serif;
+  position: relative;
+}
+
+.prologo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.prologo-header h2 {
+  margin: 0;
+  font-size: 1.8em;
+  color: #c94f4f;
+}
+
+.prologo-data {
+  font-size: 0.95em;
+  color: #888;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.prologo-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1.5em;
+}
+
+.prologo-bloco p {
+  font-size: 1.05em;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1em;
 }
 
 carrossel {
@@ -655,4 +725,53 @@ carrossel {
 .nav-btn svg {
   vertical-align: middle;
   color: #333;
+}
+
+.capitulos-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5em;
+  padding: 2em;
+  background-color: #fffefc;
+}
+
+.capitulo-bloco {
+  background: #fff9f4;
+  border: 1px solid #f2c2c2;
+  border-radius: 12px;
+  padding: 1.5em;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+  font-family: 'EB Garamond', serif;
+}
+
+.capitulo-bloco:hover {
+  transform: scale(1.02);
+}
+
+.capitulo-bloco h4 {
+  margin: 0 0 0.5em;
+  color: #c94f4f;
+  font-size: 1.3em;
+}
+
+.capitulo-data {
+  font-size: 0.9em;
+  color: #999;
+  display: block;
+  margin-bottom: 1em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.capitulo-bloco p {
+  font-size: 1em;
+  color: #444;
+  margin-bottom: 1em;
+}
+
+.leia-mais {
+  text-decoration: none;
+  color: #a84242;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
 }
