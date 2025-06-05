@@ -45,6 +45,40 @@
   <footer>
     <p>&copy; 2025 Memórias de um Intercâmbio. Todos os direitos reservados.</p>
   </footer>
+<script>
+  document.getElementById("form-contato").addEventListener("submit", function(event) {
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const telefone = document.getElementById("telefone").value.trim();
+    const mensagem = document.getElementById("mensagem").value.trim();
 
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const regexTelefone = /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/;
+
+    let erros = [];
+
+    if (nome.length < 2) {
+      erros.push("Digite seu nome completo.");
+    }
+
+    if (!regexEmail.test(email)) {
+      erros.push("Digite um e-mail válido.");
+    }
+
+    if (!regexTelefone.test(telefone)) {
+      erros.push("Digite um telefone válido (ex: (63) 91234-5678).");
+    }
+
+    if (mensagem.length < 5) {
+      erros.push("Escreva uma mensagem com pelo menos 5 caracteres.");
+    }
+
+    if (erros.length > 0) {
+      event.preventDefault(); // Impede o envio
+      alert("Erros no formulário:\n\n" + erros.join("\n"));
+    }
+  });
+</script>
+  
 </body>
 </html>
