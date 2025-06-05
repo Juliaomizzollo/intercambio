@@ -58,11 +58,11 @@
     let erros = [];
 
     if (nome.length < 2) {
-      erros.push("Digite seu nome completo.");
+      erros.push("Digite seu nome completo,por gentileza.");
     }
 
     if (!regexEmail.test(email)) {
-      erros.push("Digite um e-mail válido.");
+      erros.push("Digite um e-mail válido, por gentileza.");
     }
 
     if (!regexTelefone.test(telefone)) {
@@ -70,7 +70,7 @@
     }
 
     if (mensagem.length < 5) {
-      erros.push("Escreva uma mensagem com pelo menos 5 caracteres.");
+      erros.push("Escreva uma mensagem com pelo menos 5 caracteres, por gentileza.");
     }
 
     if (erros.length > 0) {
